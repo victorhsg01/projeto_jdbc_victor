@@ -1,5 +1,7 @@
 package com.eleodoro;
 
+import java.net.SocketTimeoutException;
+
 /**
  * Hello world!
  *
@@ -10,5 +12,6 @@ public class App
     {
         System.out.println( "Hello World!" );
         System.out.println( "testeeeeeeeeeeeeee" );
+        System.out.println("teste2");
     }
 }
