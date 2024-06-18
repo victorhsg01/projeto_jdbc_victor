@@ -18,7 +18,7 @@ public class EstoqueDAO {
         try {
             ps = conexao.getConexao().prepareStatement(sql);
             
-            ps.setString(1, estoquePojo.getCapacidade());
+            ps.setInt(1, estoquePojo.getCapacidade());
             
             ps.execute();
             ps.close();

@@ -7,7 +7,7 @@ public class EstoquePOJO {
     public EstoquePOJO() {
     }
 
-    public String getCapacidade() {
+    public int getCapacidade() {
         return capacidade;
     }
 
