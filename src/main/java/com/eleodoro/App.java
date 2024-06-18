@@ -1,4 +1,4 @@
-package com.eleodoro.modelo;
+package com.eleodoro;
 
 import java.net.SocketTimeoutException;
 
