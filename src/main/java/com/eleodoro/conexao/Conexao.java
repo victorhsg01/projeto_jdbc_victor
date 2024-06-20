@@ -6,13 +6,13 @@ import java.sql.SQLException;
 
 public class Conexao {
 
-    private String url = "jdbc:mysql://localhost:3306/loja";
-    private String user = "root";
-    private String password = "";
+    private static String url = "jdbc:mysql://localhost:3306/loja";
+    private static String user = "root";
+    private static String password = "";
 
-    private Connection conn;
+    private static Connection conn;
 
-    public Connection getConexao() {
+    public static Connection getConexao() {
 
         try {
 
