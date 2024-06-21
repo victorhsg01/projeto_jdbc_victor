@@ -28,7 +28,7 @@ public class EstoqueDao{
             return true;
          } catch (SQLException e) {
             e.printStackTrace();
-            System.out.println("Não foi possivel incluir a turma");
+            System.out.println("Não foi possivel incluir a capacidade");
             return false;
          }
     }
@@ -41,7 +41,7 @@ public class EstoqueDao{
            return true;
         } catch (SQLException e) {
            e.printStackTrace();
-           System.out.println("Não foi possivel alterar a turma");
+           System.out.println("Não foi possivel alterar a capacidade");
            return false;
         }
    }
@@ -54,7 +54,7 @@ public class EstoqueDao{
        return true;
     } catch (SQLException e) {
        e.printStackTrace();
-       System.out.println("Não foi possivel excluir a turma");
+       System.out.println("Não foi possivel excluir a capacidade");
        return false;
     }
 }
@@ -70,7 +70,7 @@ public boolean consultar(){
        return true;
     } catch (SQLException e) {
        e.printStackTrace();
-       System.out.println("Não foi possivel consultar a turma");
+       System.out.println("Não foi possivel consultar a capacidade");
        return false;
     }
 }
