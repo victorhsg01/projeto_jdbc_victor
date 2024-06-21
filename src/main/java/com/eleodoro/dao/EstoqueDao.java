@@ -20,58 +20,58 @@ public class EstoqueDao{
         this.estoque = estoque;
     }
 
-    public boolean incluir(){
+      public boolean incluir(){
          try {
             PreparedStatement ps = Conexao.getConexao () .prepareStatement(SQLINCLUIR);
             ps.setInt(1, estoque.getCapacidade());
             ps.executeUpdate();
             return true;
-         } catch (SQLException e) {
+            } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Não foi possivel incluir a capacidade");
             return false;
-         }
-    }
+            }
+      }
 
-    public boolean alterar(){
+   public boolean alterar(){
         try {
            PreparedStatement ps = Conexao.getConexao () .prepareStatement(SQLALTERAR);
            ps.setInt(2, estoque.getCapacidade());
            ps.executeUpdate();
            return true;
-        } catch (SQLException e) {
+           } catch (SQLException e) {
            e.printStackTrace();
            System.out.println("Não foi possivel alterar a capacidade");
            return false;
-        }
+      }
    }
 
    public boolean excluir(){
-    try {
-       PreparedStatement ps = Conexao.getConexao () .prepareStatement(SQLEXCLUIR);
-       ps.setInt(1, estoque.getCapacidade());
-       ps.executeUpdate();
-       return true;
-    } catch (SQLException e) {
-       e.printStackTrace();
-       System.out.println("Não foi possivel excluir a capacidade");
-       return false;
-    }
-}
+      try {
+         PreparedStatement ps = Conexao.getConexao () .prepareStatement(SQLEXCLUIR);
+         ps.setInt(1, estoque.getCapacidade());
+         ps.executeUpdate();
+         return true;
+         } catch (SQLException e) {
+         e.printStackTrace();
+         System.out.println("Não foi possivel excluir a capacidade");
+         return false;
+      }
+   }
 
-public boolean consultar(){
-    try {
-       PreparedStatement ps = Conexao.getConexao () .prepareStatement(SQLCONSULTAR);
-       ResultSet rs = ps.executeQuery();
-       if (rs.next()) {
-        estoque.setCapacidade(rs.getInt(1));
-       }
-       ps.executeUpdate();
-       return true;
-    } catch (SQLException e) {
-       e.printStackTrace();
-       System.out.println("Não foi possivel consultar a capacidade");
-       return false;
-    }
-}
+   public boolean consultar(){
+      try {
+         PreparedStatement ps = Conexao.getConexao () .prepareStatement(SQLCONSULTAR);
+         ResultSet rs = ps.executeQuery();
+         if (rs.next()) {
+         estoque.setCapacidade(rs.getInt(1));
+         }
+         ps.executeUpdate();
+         return true;
+          } catch (SQLException e) {
+         e.printStackTrace();
+         System.out.println("Não foi possivel consultar a capacidade");
+         return false;
+      }
+   }
 }
